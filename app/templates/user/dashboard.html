@@ -1,1 +1,15 @@
 Dashboard de {{user.email}}
+
+<div>
+    <div class="map" map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgphFbNcIzwHLNfsqFJBtW55ChYvN369A&libraries=drawing">
+        <ng-map id='createmap' center='[48.4713, 1.0143]' zoom='13' style="height: 500px; width: 100%">
+            <drawing-manager
+            markerOptions="{animation: 'drop',fillOpacity: 1,strokeWeight: 3,clickable: false,zIndex: 1,editable: true}"
+            drawing-control-options="{position: 'TOP_CENTER',drawingModes:['marker']}"
+            drawingControl="true"
+            drawingMode="MARKER"
+            on-markercomplete="createMarker()">
+            </drawing-manager>
+        </ng-map>
+    </div>
+</div>
